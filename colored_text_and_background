@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <windows.h>
+
+int main() {
+
+   printf("==================================\n");
+   printf("========== COLORS FOR C ==========\n");
+   printf("==================================\n\n");
+
+   for(int i = 1; i < 255; i++)
+   {
+      // pick the colorattribute k you want
+      SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), i);
+      printf("[%i] - I want to be nice today!\n", i);
+   }
+
+   return 0;
+}
